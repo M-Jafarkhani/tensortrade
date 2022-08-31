@@ -87,8 +87,7 @@ class CryptoDataDownload:
     def fetch_mofid(self,
                     base_symbol: str,
                     quote_symbol: str,
-                    timeframe: str,
-                    include_all_volumes: bool = False) -> pd.DataFrame:
+                    timeframe: str) -> pd.DataFrame:
         """Fetches data from all exchanges that match the evaluation structure.
 
         Parameters
@@ -149,10 +148,6 @@ class CryptoDataDownload:
         df = df.set_index("date")
         df.columns = [name.lower() for name in df.columns]
         df = df.reset_index()
-        if not include_all_volumes:
-            df = df.drop([new_quote_vc], axis=1)
-            df = df.rename({new_base_vc: "volume"}, axis=1)
-            return df
         return df
 
     def fetch_gemini(self,
