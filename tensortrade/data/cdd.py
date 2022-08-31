@@ -216,7 +216,7 @@ class CryptoDataDownload:
         if exchange_name.lower() == "gemini":
             return self.fetch_gemini(base_symbol, quote_symbol, timeframe)
         elif exchange_name.lower() == "mofid":
-            return self.fetch_mofid(base_symbol, quote_symbol, timeframe)
+            return self.fetch_mofid(base_symbol, quote_symbol, timeframe, startEpoch, endEpoch)
         return self.fetch_default(exchange_name,
                                   base_symbol,
                                   quote_symbol,
