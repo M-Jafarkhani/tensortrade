@@ -116,7 +116,7 @@ class CryptoDataDownload:
         new_quote_vc = "volume_quote"
 
         timeframe = '1'
-        startEpoch = datetime(2020, 7, 27, 0, 0).strftime('%s')
+        startEpoch = datetime(2020, 7, 28, 0, 0).strftime('%s')
         endEpoch = datetime(2022, 8, 24, 23, 59).strftime('%s')
 
         url = f'https://rlcchartapi.mofidonline.com/ChartData/history?symbol={base_symbol}&resolution={timeframe}&from={startEpoch}&to={endEpoch}'
