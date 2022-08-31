@@ -87,7 +87,9 @@ class CryptoDataDownload:
     def fetch_mofid(self,
                     base_symbol: str,
                     quote_symbol: str,
-                    timeframe: str) -> pd.DataFrame:
+                    timeframe: str,
+                    startEpoch: str,
+                    endEpoch: str) -> pd.DataFrame:
         """Fetches data from all exchanges that match the evaluation structure.
 
         Parameters
@@ -116,8 +118,6 @@ class CryptoDataDownload:
         new_quote_vc = "volume_quote"
 
         timeframe = '1'
-        startEpoch = datetime(2020, 7, 30, 0, 0).strftime('%s')
-        endEpoch = datetime(2022, 8, 24, 23, 59).strftime('%s')
 
         url = f'https://rlcchartapi.mofidonline.com/ChartData/history?symbol={base_symbol}&resolution={timeframe}&from={startEpoch}&to={endEpoch}'
 
@@ -189,7 +189,9 @@ class CryptoDataDownload:
               base_symbol: str,
               quote_symbol: str,
               timeframe: str,
-              include_all_volumes: bool = False) -> pd.DataFrame:
+              include_all_volumes: bool = False,
+              startEpoch: str = '1661870846',
+              endEpoch:str = '1661957246') -> pd.DataFrame:
         """Fetches data for different exchanges and cryptocurrency pairs.
 
         Parameters
