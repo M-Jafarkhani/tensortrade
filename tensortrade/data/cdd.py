@@ -85,7 +85,6 @@ class CryptoDataDownload:
         return df
 
     def fetch_mofid(self,
-                    exchange_name: str,
                     base_symbol: str,
                     quote_symbol: str,
                     timeframe: str,
@@ -112,7 +111,6 @@ class CryptoDataDownload:
             cryptocurrency pair.
         """
 
-        filename = "{}_{}{}_{}.csv".format(exchange_name, quote_symbol, base_symbol, timeframe)
         base_vc = "Volume {}".format(base_symbol)
         new_base_vc = "volume_base"
         quote_vc = "Volume {}".format(quote_symbol)
