@@ -128,6 +128,7 @@ class CryptoDataDownload:
         size = len(json_content['t'])
         for i in range(size):
             df = df.append({
+                'unix': int(json_content['t'][i]),
                 'date': datetime.fromtimestamp(int(json_content['t'][i])),
                 'open': json_content['o'][i],
                 'high': json_content['h'][i],
