@@ -148,6 +148,7 @@ EUR = Instrument('EUR', 2, 'Euro')
 JPY = Instrument('JPY', 2, 'Japanese Yen')
 KWN = Instrument('KWN', 2, 'Korean Won')
 AUD = Instrument('AUD', 2, 'Australian Dollar')
+IRR = Instrument('IRR', 0, 'Iranian Rial')
 
 # Commodities
 XAU = Instrument('XAU', 2, 'Gold futures')
@@ -159,3 +160,4 @@ AAPL = Instrument('AAPL', 2, 'Apple stock')
 MSFT = Instrument('MSFT', 2, 'Microsoft stock')
 TSLA = Instrument('TSLA', 2, 'Tesla stock')
 AMZN = Instrument('AMZN', 2, 'Amazon stock')
+IRT1DARA0001 = Instrument('IRT1DARA0001', 0, 'IRT1DARA0001')
